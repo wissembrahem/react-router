@@ -8,7 +8,11 @@ export default function Header() {
     {
         name: "Aboutus",
         path: "/Aboutus",
-    }
+    },
+    {
+        name: "Products",
+        path: "/products",
+    },
     ]
     return (
         <>
