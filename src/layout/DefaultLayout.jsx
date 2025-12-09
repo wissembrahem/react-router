@@ -4,7 +4,7 @@ import Header from "../assets/components/Header"
 function DefaultLayout() {
     return (
         <>
-        <Header/>
+        <Header />
         <main>
             <Outlet/>
         </main>
