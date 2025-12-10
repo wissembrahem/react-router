@@ -4,6 +4,7 @@ import Home from './assets/pages/Home'
 import Aboutus from './assets/pages/Aboutus'
 import DefaultLayout from './layout/DefaultLayout'
 import Products from './assets/pages/Products'
+import ProductPage from './assets/pages/ProductPage'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/Aboutus" element={<Aboutus />}/>
         <Route path='/products' element={<Products/>}/>
+        <Route path='/products/:id' element={<ProductPage/>}/>
         </Route>
       </Routes>
        </BrowserRouter>
