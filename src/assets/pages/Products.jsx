@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 export default function Products() {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        axios.get(" https://fakestoreapi.com/products").then((resp) => {
+        axios.get("https://fakestoreapi.com/products").then((resp) => {
             setProducts(resp.data)
             console.log(resp)
         })
@@ -17,6 +18,7 @@ export default function Products() {
                     {
                         products.map((product) => (
                             <div key={product.id} className="col">
+                                
                                 <div className="card h-100">
                                     <img src={product.image} className="card-img-top img-fluid" alt={product.title} />
                                     <div className="card-body">
@@ -28,7 +30,7 @@ export default function Products() {
                                         <li className="list-group-item">${product.price}</li>
                                     </ul>
                                     <div className="card-body">
-                                        <a href="#" className="card-link">Card link</a>
+                                    <Link to={`/product/${product.id}`}>{product.title}</Link>    
                                     </div>
                                 </div>
                             </div>
